@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "bot_token": "8701721704:AAFXhz4h48l9Ha_qkRje71Uc7IcWmIdv34M",
+  "chat_id": "070893535",
+  "notify_sales": true,
+  "notify_purchases": true,
+  "notify_stock": true
+}

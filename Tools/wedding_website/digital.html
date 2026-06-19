@@ -1,0 +1,148 @@
+
+        <!DOCTYPE html>
+        <html lang="km">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>សំបុត្រអញ្ជើញឌីជីថល</title>
+            <style>
+                body {
+                    font-family: 'Battambang', 'Khmer OS', sans-serif;
+                    background-color: #FFF8DC;
+                    padding: 20px;
+                    color: #333;
+                }
+                .container {
+                    max-width: 1000px;
+                    margin: 0 auto;
+                }
+                h1 {
+                    color: #8B4513;
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+                .invitation-card {
+                    background: white;
+                    border-radius: 10px;
+                    padding: 40px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                    border: 2px solid #D2691E;
+                    position: relative;
+                    margin-bottom: 30px;
+                }
+                .invitation-header {
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+                .invitation-header h2 {
+                    color: #8B4513;
+                    font-size: 2rem;
+                    margin-bottom: 10px;
+                }
+                .couple-names {
+                    font-size: 2.5rem;
+                    color: #D2691E;
+                    margin: 20px 0;
+                    font-weight: bold;
+                }
+                .details {
+                    margin: 30px 0;
+                    line-height: 1.8;
+                }
+                .detail-item {
+                    margin-bottom: 15px;
+                    font-size: 1.1rem;
+                }
+                .actions {
+                    text-align: center;
+                    margin-top: 40px;
+                }
+                .btn {
+                    background: #D2691E;
+                    color: white;
+                    padding: 12px 30px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 16px;
+                    margin: 0 10px;
+                    display: inline-block;
+                }
+                .btn:hover {
+                    background: #8B4513;
+                }
+                .customize-panel {
+                    background: white;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                    margin-top: 30px;
+                }
+                .customize-panel h3 {
+                    color: #8B4513;
+                    margin-bottom: 20px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>បង្កើតសំបុត្រអញ្ជើញឌីជីថល</h1>
+                
+                <div class="invitation-card" id="invitationCard">
+                    <div class="invitation-header">
+                        <h2>សំបុត្រអញ្ជើញចូលរួមពិធីអាពាហ៍ពិពាហ៍</h2>
+                        <div class="couple-names">សុខ សំអាត & ស្រី សិរីមង្គល</div>
+                        <p>សូមអញ្ជើញអ្នកទាំងអស់គ្នាចូលរួមពិធីមង្គលការរបស់យើងខ្ញុំ</p>
+                    </div>
+                    
+                    <div class="details">
+                        <div class="detail-item"><strong>កាលបរិច្ឆេទ:</strong> ១៥ កក្កដា ២០២៤</div>
+                        <div class="detail-item"><strong>ម៉ោង:</strong> ៧:០០ព្រឹក (ពិធីមង្គលការនៅវត្ត)</div>
+                        <div class="detail-item"><strong>ទីតាំងវត្ត:</strong> វត្តឧណ្ណាលោម</div>
+                        <div class="detail-item"><strong>ម៉ោងរាប់ាអាហារ:</strong> ១២:០០ថ្ងៃត្រង់</div>
+                        <div class="detail-item"><strong>ទីតាំងរាប់ាអាហារ:</strong> សាលរោងអាពាហ៍ពិពាហ៍ ទួលគោក</div>
+                    </div>
+                    
+                    <div class="actions">
+                        <p>សូមអរគុណសម្រាប់ការមកដល់របស់អ្នក!</p>
+                    </div>
+                </div>
+                
+                <div class="customize-panel">
+                    <h3>ការកំណត់ផ្ទាល់ខ្លួន</h3>
+                    <div class="form-group">
+                        <label>ឈ្មោះគូរៀបអាពាហ៍ពិពាហ៍:</label>
+                        <input type="text" id="coupleNames" value="សុខ សំអាត & ស្រី សិរីមង្គល" style="width: 100%; padding: 10px; margin: 10px 0;">
+                    </div>
+                    <div class="form-group">
+                        <label>កាលបរិច្ឆេទ:</label>
+                        <input type="text" id="weddingDate" value="១៥ កក្កដា ២០២៤" style="width: 100%; padding: 10px; margin: 10px 0;">
+                    </div>
+                    <button class="btn" onclick="updateInvitation()">អាប់ដេតសំបុត្រ</button>
+                    <button class="btn" onclick="printInvitation()">បោះពុម្ពសំបុត្រ</button>
+                    <button class="btn" onclick="shareInvitation()">ចែករំលែកសំបុត្រ</button>
+                </div>
+            </div>
+            
+            <script>
+                function updateInvitation() {
+                    const coupleNames = document.getElementById('coupleNames').value;
+                    const weddingDate = document.getElementById('weddingDate').value;
+                    
+                    document.querySelector('.couple-names').textContent = coupleNames;
+                    document.querySelector('.detail-item:nth-child(1)').innerHTML = `<strong>កាលបរិច្ឆេទ:</strong> ${weddingDate}`;
+                    
+                    alert('សំបុត្រត្រូវបានអាប់ដេតដោយជោគជ័យ!');
+                }
+                
+                function printInvitation() {
+                    window.print();
+                }
+                
+                function shareInvitation() {
+                    alert('សំបុត្រត្រូវបានចែករំលែកដោយជោគជ័យ! (មុខងារនេះនឹងដំណើរការនៅលើម៉ាស៊ីនជាក់ស្តែង)');
+                }
+            </script>
+        </body>
+        </html>
+        

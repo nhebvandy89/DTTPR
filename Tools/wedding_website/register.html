@@ -1,0 +1,115 @@
+
+        <!DOCTYPE html>
+        <html lang="km">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>កត់ចំណងដៃ</title>
+            <style>
+                body {
+                    font-family: 'Battambang', 'Khmer OS', sans-serif;
+                    background-color: #FFF8DC;
+                    padding: 20px;
+                    color: #333;
+                }
+                .container {
+                    max-width: 800px;
+                    margin: 0 auto;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 10px;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    color: #8B4513;
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+                .form-group {
+                    margin-bottom: 20px;
+                }
+                label {
+                    display: block;
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                    color: #555;
+                }
+                input, select, textarea {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    font-size: 16px;
+                }
+                .row {
+                    display: flex;
+                    gap: 20px;
+                }
+                .row .form-group {
+                    flex: 1;
+                }
+                .btn {
+                    background: #D2691E;
+                    color: white;
+                    padding: 12px 30px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 16px;
+                    display: block;
+                    margin: 30px auto 0;
+                }
+                .btn:hover {
+                    background: #8B4513;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>ទម្រង់កត់ត្រាចំណងដៃ</h1>
+                <form id="marriageForm">
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="groomName">ឈ្មោះខាងប្រុស</label>
+                            <input type="text" id="groomName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="brideName">ឈ្មោះខាងស្រី</label>
+                            <input type="text" id="brideName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="weddingDate">កាលបរិច្ឆេទរៀបអាពាហ៍ពិពាហ៍</label>
+                            <input type="date" id="weddingDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">ទីតាំង</label>
+                            <input type="text" id="location" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="witnesses">ឈ្មោះសាក្សី (ដាច់ពីគ្នាដោយក្បៀស)</label>
+                        <textarea id="witnesses" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes">កំណត់ចំណាំបន្ថែម</label>
+                        <textarea id="notes" rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">រក្សាទុកការកត់ត្រា</button>
+                </form>
+            </div>
+            
+            <script>
+                document.getElementById('marriageForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('ការកត់ត្រាចំណងដៃត្រូវបានរក្សាទុកដោយជោគជ័យ!');
+                });
+            </script>
+        </body>
+        </html>
+        

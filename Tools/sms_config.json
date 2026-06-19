@@ -1,0 +1,8 @@
+{
+  "sms_enabled": true,
+  "provider": "twilio",
+  "shop_owner_phone": "+85570893535",
+  "twilio_sid": "YOUR_TWILIO_ACCOUNT_SID",
+  "twilio_token": "YOUR_TWILIO_AUTH_TOKEN",
+  "twilio_phone": "+85592893535"
+}
